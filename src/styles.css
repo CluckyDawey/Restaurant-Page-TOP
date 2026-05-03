@@ -1,0 +1,130 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5rem;
+    width: 100vw;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    z-index: 2;
+}
+
+.navbar img {
+    height: 100%;
+    width: 6%;
+    border-radius: 50%;
+    margin-left: 2vw;
+    object-fit: cover;
+}
+
+nav {
+    margin-right: 1vw;
+    flex-grow: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+.navlink {
+    color: white;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.navlink:hover {
+    color: #ddd;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.navlink > a {
+    color: white;
+    text-decoration: none;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+#home {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('image_6cd360ce.png');
+    background-size: cover;
+    filter: blur(10px);
+    z-index: -1;
+    transform: scale(1.1); 
+}
+
+.home-content {
+    width: 60vw;
+    height: 50%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.home-content>img {
+    display: inline;
+    width: 50%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.home-content>div {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3vw;
+}
+
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1vh 0;
+    width: 100%;
+}

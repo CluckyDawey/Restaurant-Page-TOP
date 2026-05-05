@@ -44,6 +44,12 @@ nav {
     text-decoration: none;
     font-size: 1.2rem;
     transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.navlink.active {
+    color: goldenrod;
+    text-decoration: underline;
 }
 
 .navlink:hover {
@@ -63,11 +69,12 @@ nav {
     align-items: center;
     width: 100%;
     max-width: 100%;
+    padding-top: 5rem;
 }
 
 #home {
     position: relative;
-    height: 100vh;
+    min-height: calc(100vh - 5rem);
     width: 100vw;
     overflow: hidden;
     display: flex;
@@ -180,4 +187,161 @@ nav {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     box-shadow: 0 2px 5px goldenrod;
+}
+
+#contact {
+    background-color: #fff;
+    padding: 6rem 0 4rem;
+    min-height: calc(100vh - 5rem);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-header {
+    width: 80%;
+    max-width: 900px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-header h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.contact-header p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.contact-grid {
+    width: 80%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.contact-details,
+.contact-form {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.contact-details h2,
+.contact-form h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.contact-details p {
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.65;
+}
+
+.details-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.detail-entry {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.detail-label {
+    font-weight: 700;
+    color: #222;
+}
+
+.detail-value {
+    color: #444;
+}
+
+.contact-form .field-group {
+    margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 0.95rem 1rem;
+    font-size: 1rem;
+    color: #333;
+    background: white;
+    transition: border-color 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: goldenrod;
+}
+
+.contact-form button {
+    margin-top: 0.5rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0.95rem 1.45rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+    background-color: goldenrod;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-content {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .menu-selection {
+        width: 100%;
+        border-radius: 10px;
+        border-right: none;
+        border-bottom: goldenrod solid 2px;
+    }
+
+    .menu-display {
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .home-content {
+        flex-direction: column;
+        width: 85vw;
+    }
+
+    .home-content > img,
+    .home-content > div {
+        width: 100%;
+    }
+
+    .contact-header,
+    .contact-grid {
+        width: 92%;
+    }
 }
